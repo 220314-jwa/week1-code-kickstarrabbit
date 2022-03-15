@@ -1,13 +1,14 @@
+// defines the ident 'score' as a int
 int score = 80;
 
 String result;
-
-if (score == 80) {
-	result = "You passed!";
-} else if (score > 80) {
-	result = "You did great!";
-} else {
-	result = "You did not pass. Try again!";
-}
+// loop start
+if (score == 80) {  // if score is equal to 80 proceed
+	result = "You passed!"; // print
+} else if (score > 80) {  // if value was not 80 and greater than
+	result = "You did great!"; // print
+} else {  // all other scores below 80
+	result = "You did not pass. Try again!"; // print
+} // eof
 
 System.out.println(result);
