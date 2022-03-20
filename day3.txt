@@ -1,24 +1,24 @@
-public class Food {
-	public String name;
-	public String type;
-
-	public Food(String name, String type) {
-		this.name = name;
-		this.type = type;
-	}
-
-	public void cook() {
-		if (!name.contains("cooked")) {
-			name = "cooked " + name;
-		}
-	}
-}
-
-public class Main {
-	public static void main(String[] args) {
-		Food myFood = new Food("potato", "vegetable");
-		myFood.cook();
-
-		System.out.println(myFood.name);
-	}
-}
+public class Food {                                         // class header Food
+	public String name;                                     // define reference type
+	public String type;                                     // define reference type
+                                                            // whitespace
+	public Food(String name, String type) {                 // declare food with args
+		this.name = name;                                   // define var
+		this.type = type;                                   // define var
+	}                                                       // end public food
+                                                            // whitespace
+	public void cook() {                                    // declare cook() no parameters passed to class
+		if (!name.contains("cooked")) {                     // begin if
+			name = "cooked " + name;                        // if var contains cooked than add name var
+		}                                                   // end if
+}                                                           // end public void cook 
+}                                                           // end public class food
+                                                            // whitespace
+public class Main {                                         // class header Main
+	public static void main(String[] args) {                // main method
+		Food myFood = new Food("potato", "vegetable");      //  define var
+		myFood.cook();                                      // adds myFood to name var
+                                                            // whitespace
+		System.out.println(myFood.name);                    // sysout - display string
+	}                                                       // end main method
+}                                                           // end public class main

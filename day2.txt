@@ -1,52 +1,59 @@
-public static void main(String[] args) {
-	String[] foodTypes = getFoodTypes();
-	String myType = foodTypes[2];
+                                                                                // Summary :: code snippet is to test the string getFoodTypes against a series of exact strings 
+public static void main(String[] args) {                                        // main method
+	String[] foodTypes = getFoodTypes();                                        // define var 
+	String myType = foodTypes[2];                                               // define var
+                                                                                // whitespace
+	String[] foodsOfMyType = getFoodsByType(myType);                            // define var
+                                                                                // space
+	for (String food : foodsOfMyType) {                                         // for loop
+		System.out.println(food);                                               // sysout 
+	}                                                                           // end for
+}                                                                               // end main method
+                                                                                // whitespace 
+public static String[] getFoodTypes() {                                         // define string
+	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};      // string array literal
+	return foodTypes;                                                           // the value stored in foodTypes is sent back to method that calls the getFoodTypes
+}                                                                               // end public static String[] getFoodTypes()
+                                                                                // whitespace
+public static String[] getFoodsByType(String type) {                            // define string
+	String[] foods = new String[3];                                             // define var 
+                                                                                // whitespace
+	switch(type) {                                                              // begin of switch structure with test expression in paranthesis - alt to nested if statement
+	case "breakfast":                                                           // case "" value of test expression called type
+		foods[0] = "pancakes";                                                  // test a single variable against a series of exact strings
+		foods[1] = "cereal";                                                    // test a single variable against a series of exact strings
+		foods[2] = "omelette";                                                  // test a single variable against a series of exact strings
+		break;                                                                  // terminates a switch structure
+	case "lunch":                                                               // case "" value of test expression called type
+		foods[0] = "sandwich";                                                  // test a single variable against a series of exact strings 
+		foods[1] = "salad";                                                     // test a single variable against a series of exact strings
+		foods[2] = "soup";                                                      // test a single variable against a series of exact strings
+		break;                                                                  // terminates a switch structure
+	case "dinner":                                                              // case "" value of test expression called type
+		foods[0] = "curry";                                                     // test a single variable against a series of exact strings
+		foods[1] = "stir fry";                                                  // test a single variable against a series of exact strings
+		foods[2] = "burger";                                                    // test a single variable against a series of exact strings
+		break;                                                                  // terminates a switch structure
+	case "dessert":                                                             // case "" value of test expression called type
+		foods[0] = "cake";                                                      // test a single variable against a series of exact strings
+		foods[1] = "ice cream";                                                 // test a single variable against a series of exact strings
+		foods[2] = "candy";                                                     // test a single variable against a series of exact strings
+		break;                                                                  // terminates a switch structure
+	case "snack":                                                               // case "" value of test expression called type
+		foods[0] = "chips";                                                     // test a single variable against a series of exact strings
+		foods[1] = "apple";                                                     // test a single variable against a series of exact strings
+		foods[2] = "samosa";                                                    // test a single variable against a series of exact strings
+		break;                                                                  // terminates a switch structure
+	case "brunch";                                                              // case "" value of test expression called type
+        foods[0] = "grapefruit";                                                // test a single variable against a series of exact strings
+        foods[1] = "strawberry";                                                // test a single variable against a series of exact strings
+        foods[2] = "blueberry";                                                 // test a single variable against a series of exact strings
+    break;                                                                      // terminates a switch structure
+    default:                                                                    // optionally is used prior to any action that should occur if the test variable does not match any case
+		System.out.println("Invalid");                                          // add my own
+    break;                                                                      // terminates a switch structure
+	}                                                                           // end switch type
+                                                                                // whitespace
+	return foods;                                                               // the value stored in foods is sent back to the method getFoodsByType
+}                                                                               // end public static String[] getFoodsByType(String type)
 
-	String[] foodsOfMyType = getFoodsByType(myType);
-	
-	for (String food : foodsOfMyType) {
-		System.out.println(food);
-	}
-}
-
-public static String[] getFoodTypes() {
-	String[] foodTypes = {"breakfast","lunch","dinner","dessert","snack"};
-	return foodTypes;
-}
-
-public static String[] getFoodsByType(String type) {
-	String[] foods = new String[3];
-
-	switch(type) {
-	case "breakfast":
-		foods[0] = "pancakes";
-		foods[1] = "cereal";
-		foods[2] = "omelette";
-		break;
-	case "lunch":
-		foods[0] = "sandwich";
-		foods[1] = "salad";
-		foods[2] = "soup";
-		break;
-	case "dinner":
-		foods[0] = "curry";
-		foods[1] = "stir fry";
-		foods[2] = "burger";
-		break;
-	case "dessert":
-		foods[0] = "cake";
-		foods[1] = "ice cream";
-		foods[2] = "candy";
-		break;
-	case "snack":
-		foods[0] = "chips";
-		foods[1] = "apple";
-		foods[2] = "samosa";
-		break;
-	default:
-		// add your own
-		break;
-	}
-
-	return foods;
-}
