@@ -1,12 +1,13 @@
-public class Main {
-	public static void main(String[] args) {
-		Javalin app = Javalin.create();
-
-		app.start();
-
-		app.get("foods", ctx -> {
-			Food myFood = new Food("carrots", "vegetable");
-			ctx.result("You got: " + myFood.name);
-		});
-	}
-}
+                                                                // Summary :: Starts Javalin with basic HTTP request
+public class Main {                                             // class header Main
+	public static void main(String[] args) {                    //  main method
+		Javalin app = Javalin.create();                         // starts the javalin program under .create 
+                                                                // whitespace
+		app.start();                                            // start server
+                                                                // whitespace
+		app.get("foods", ctx -> {                               // ctx represents the instance
+			Food myFood = new Food("carrots", "vegetable");     // define args 
+        ctx.result("You got: " + myFood.name);                  // RESPONSE method - get HttpServletResponse 
+		});                                                     // end app.get
+	}                                                           // end main method 
+}                                                               // end public class main
